@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1542036723 source:c:\users\cleme\documents\projet 1 cesi\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1542037451 c:\users\cleme\documents\projet 1 cesi\menu.h
+
+1542037260 source:c:\users\cleme\documents\projet 1 cesi\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+

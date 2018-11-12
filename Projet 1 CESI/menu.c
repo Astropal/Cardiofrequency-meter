@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "menu.h"
 
-void main()
+void afficherMenu()
 {
   int choice = 1;
 
@@ -13,9 +14,9 @@ void main()
           printf("(1)     Afficher les donnees du fichier\n");
           printf("(2)     Afficher les donnees du dossier par ordre croissant/decroissant\n");
           printf("(3)     Rechercher et afficher une donnee a un temps particulier\n");
-          printf("(4)     Afficher la moyenne de pouls dans une plage de temps donnée\n");
-          printf("(5)     Afficher le nombre de lignes de données actuellement en mémoire\n");
-          printf("(6)     Rechercher et afficher les max/min de pouls (avec le temps associé)\n");
+          printf("(4)     Afficher la moyenne de pouls dans une plage de temps donn�e\n");
+          printf("(5)     Afficher le nombre de lignes de donn�es actuellement en m�moire\n");
+          printf("(6)     Rechercher et afficher les max/min de pouls (avec le temps associ�)\n");
           printf("(autre) Quitter?\n\n");
 
           scanf("%d",&choice);
