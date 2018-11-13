@@ -10,13 +10,16 @@ void loop() {
   Incr = Incr + 1;
   if(pouls == 70){
     pouls = 70 + 5;
-     Serial.println(pouls);
+    Serial.print("P");
+    Serial.println(pouls);
   }
   if(pouls == 75){
    pouls = 75 - 5; 
+   Serial.print("P");
    Serial.println(pouls);
   }
-  
+
+  Serial.print("F");
   Serial.println(Incr);
   delay(100);        
 }
