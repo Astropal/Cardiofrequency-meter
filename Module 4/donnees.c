@@ -9,7 +9,7 @@ donnee* creerDonnee(int pouls, int frequance)
     donnee *donneeCreation ;
 
     donneeCreation = malloc(sizeof(donnee));
-    donneeCreation->pouls = pouls - 1;
+    donneeCreation->pouls = pouls;
     donneeCreation->frequance = frequance;
     donneeCreation->nextDonnee = NULL;
     return donneeCreation;
@@ -51,12 +51,7 @@ donnee *chargeFichier() {
             while(fgets(line,255,f) != NULL)
             {
 
-                fscanf(f,"%d\n", &pouls);
-                if (strcmp(sscanf(f, "%s"),";"))
-                    {
-                    fscanf(f,"%d\n", &frequance);
-                    }
-
+                fscanf(f,"%d;%d\n", &pouls, &frequance);
                 lastDonnee = creerDonnee(pouls, frequance);
                 ajouterDonneeListe( lastDonnee, currDonnee);
                 currDonnee = lastDonnee;
