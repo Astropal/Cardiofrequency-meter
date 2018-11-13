@@ -8,15 +8,15 @@ void setup() {
 
 void loop() {
   Incr = Incr + 1;
-  if(pouls == 70){
-    pouls = 70 + 5;
-     Serial.println(pouls);
-  }
+  pouls = pouls + 1;
   if(pouls == 75){
-   pouls = 75 - 5; 
-   Serial.println(pouls);
+    pouls = pouls - 5;
   }
-  
-  Serial.println(Incr);
+
+   
+  Serial.print(pouls);
+  Serial.print(";");
+  Serial.print(Incr);
+  Serial.print("\n");
   delay(100);        
 }
