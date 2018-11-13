@@ -34,6 +34,11 @@
 		<Unit filename="action.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="action.h" />
+		<Unit filename="donnees.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="donnees.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
