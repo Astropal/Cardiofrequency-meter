@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1542025998 source:c:\users\antoi\onedrive\documents\exia\projets\blocs 1\paramètre coeur\generationcode.c
+
+1542038098 source:c:\users\antoi\onedrive\documents\exia\projets\blocs 1\paramètre coeur\menu.c
+
+1542038003 source:c:\users\antoi\onedrive\documents\exia\projets\blocs 1\paramètre coeur\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1542038644 c:\users\antoi\onedrive\documents\exia\projets\blocs 1\paramètre coeur\menu.h
+
+1542109646 source:c:\users\antoi\onedrive\documents\exia\projets\blocs 1\code c\generationcode.c
+	"generationCode.h"
+	<stdio.h>
+
+1542104112 source:c:\users\antoi\onedrive\documents\exia\projets\blocs 1\code c\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1542101102 c:\users\antoi\onedrive\documents\exia\projets\blocs 1\code c\menu.h
+
+1542106251 source:c:\users\antoi\onedrive\documents\exia\projets\blocs 1\code c\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"generationCode.h"
+
+1542102395 c:\users\antoi\onedrive\documents\exia\projets\blocs 1\code c\generationcode.h
+
+1542125631 source:c:\users\antoi\onedrive\documents\exia\projets\blocs 1\coeur.c\generationcode.c
+	"generationCode.h"
+	<stdio.h>
+	<stdlib.h>
+
+1542123292 c:\users\antoi\onedrive\documents\exia\projets\blocs 1\coeur.c\generationcode.h
+
+1542122005 source:c:\users\antoi\onedrive\documents\exia\projets\blocs 1\coeur.c\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1542121983 c:\users\antoi\onedrive\documents\exia\projets\blocs 1\coeur.c\menu.h
+
+1542125514 source:c:\users\antoi\onedrive\documents\exia\projets\blocs 1\coeur.c\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"generationCode.h"
+
