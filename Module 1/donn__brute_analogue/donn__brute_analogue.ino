@@ -1,5 +1,5 @@
 /*Capteur infrarouge pour calcul du pouls
-On enregistre les données brutes pendant 5 secondes */
+On enregistre les données brutes pendant 2,5 secondes */
 
 unsigned long time;
 
@@ -16,7 +16,7 @@ void setup() {
 
   time = millis();
 
-  // on affiche au moniteur série pendant 5 secondes
+  // on affiche au moniteur série pendant 2,5 secondes
   while((millis()-time)< 2500){
     delay(100);
     Serial.println(analogRead(0));
