@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "menu.h"
 #include "donnees.h"
+#include "action.h"
 void afficherMenu()
 {
     int choice = 1;
@@ -14,10 +15,10 @@ void afficherMenu()
           printf("Que souhaitez-vous faire?\n\n");
           printf("(1)     Afficher les donnees du fichier\n");
           printf("(2)     Afficher les donnees du dossier par ordre croissant/decroissant\n");
-          printf("(3)     Rechercher et afficher une donnee a un temps particulier\n");
-          printf("(4)     Afficher la moyenne de pouls dans une plage de temps donn�e\n");
-          printf("(5)     Afficher le nombre de lignes de donn�es actuellement en m�moire\n");
-          printf("(6)     Rechercher et afficher les max/min de pouls (avec le temps associ�)\n");
+          printf("(3)     Rechercher et afficher les max/min de pouls (avec le temps associe)\n");
+          printf("(4)     Afficher la moyenne de pouls dans une plage de temps donnee\n");
+          printf("(5)     Rechercher et afficher une donnee a un temps particulier\n");
+          printf("(6)     Afficher le nombre de lignes de donnees actuellement en memoire\n");
           printf("(0) Quitter?\n\n");
 
           scanf("%d",&choice);
@@ -32,27 +33,32 @@ void afficherMenu()
         			}
         			case 2  :
         			{
-
+                        listeDeDonnee = chargeFichier();
+                        trierListe(listeDeDonnee);
         				break;
         			}
         			case 3 :
                   {
-
+                    listeDeDonnee = chargeFichier();
+                    rechercheMaxEtMin (listeDeDonnee);
                     break;
                   }
                   case 4 :
                   {
-
+                    listeDeDonnee = chargeFichier();
+                    moyennePouls (listeDeDonnee);
                     break;
                   }
                   case 5 :
                   {
-
+                    listeDeDonnee = chargeFichier();
+                    tempsPrecis (listeDeDonnee);
                     break;
                   }
                   case 6 :
                   {
-
+                    listeDeDonnee = chargeFichier();
+                    lignesMemoire(listeDeDonnee);
                     break;
                   }
 

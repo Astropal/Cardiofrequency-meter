@@ -25,9 +25,10 @@ donnee *chargeFichier() {
     donnee *lastDonnee = NULL;
     donnee *currDonnee = NULL;
 
+
     int checkCloture = 1;
-    int pouls = 0;
-    int frequance = 0;
+    int pouls;
+    int frequance;
     char line[255];
 
     FILE *f;
@@ -48,14 +49,16 @@ donnee *chargeFichier() {
             memset(line, '\0', 255);
 
 
-            while(fgets(line,255,f) != NULL)
+            while(fgets(line,255,f))
             {
 
-                fscanf(f,"%d;%d\n", &pouls, &frequance);
+                sscanf(line,"%d;%d\n", &pouls, &frequance);
                 lastDonnee = creerDonnee(pouls, frequance);
                 ajouterDonneeListe( lastDonnee, currDonnee);
                 currDonnee = lastDonnee;
             }
+
+
 
             }
         checkCloture = fclose(f);
@@ -68,6 +71,7 @@ donnee *chargeFichier() {
             printf("Echec fermeture du fichier\n");
         }
         return listeDonnee;
+
 }
 
 

@@ -12,6 +12,7 @@ int frequance;
 donnee *nextDonnee;
 };
 
+donnee* chargeFichier();
 donnee* creerDonnee(int pouls, int freqance);
 int sauveDonnees(donnee *listeDonnee);
 void ajouterDonneeListe(donnee *donneeAAjouter, donnee *derniereDonneeDeLaListe);
