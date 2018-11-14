@@ -13,7 +13,8 @@ Projet Blocs scientifiques 1
 int main() {
 
     int choice;
+    int n;
 
-    afficherMenu(choice);
+    afficherMenu(choice, n);
 
 }
