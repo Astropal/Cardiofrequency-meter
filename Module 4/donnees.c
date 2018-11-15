@@ -36,7 +36,7 @@ donnee *chargeFichier() {
     listeDonnee = malloc(sizeof(donnee));
     currDonnee = listeDonnee;
 
-    f = fopen("Battements.csv", "r");
+    f = fopen("ConvertisseurSerialCSV/Battements.csv", "r");
 
         if( f == NULL)
         {
