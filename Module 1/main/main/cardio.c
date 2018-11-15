@@ -14,23 +14,31 @@ float randome(void){
 int pouls(void) {
   int Rcardiaque;
   float brand;
+  int Rseconde;
+  int toto;
 
-  // Recuperation du nombre aleatoire pour calculer le pouls 
+  // Recuperation du nombre aleatoire pour calculer le pouls
   brand=randome();
- 
+
  //*Calcul des battements cardiaques
   Rcardiaque = (int) (( 1000 / brand )* 60);
 
   // Retour de pouls
   return Rcardiaque;
+
+  toto=Rcardiaque;
+
+  Rseconde = toto/60;
+
+  return Rseconde;
 }
 
 void affichage(int Rcardiaque, unsigned long time){
    // Affichage format csv  temps;pouls
-   
+
    // affichage du temps
    Serial.print(time);
-   // affichage du ; 
+   // affichage du ;
    Serial.print(";");
    // affichage du pouls
    Serial.println(Rcardiaque);
@@ -47,7 +55,7 @@ void calcul(void){
   RC = pouls();
   // Boucle d'attente en millliseconde
   (delay) (900);
-  // Envoi des donnÃ©es sur l eport serie
+  // Envoi des données sur l eport serie
   affichage(RC, time);
 
 }

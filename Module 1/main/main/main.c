@@ -1,7 +1,7 @@
 #include "Cardio.h"
 
 void setup() {
-  
+
   Serial.begin(9600);
 
 }
