@@ -4,13 +4,13 @@
 #include <string.h>
 
 
-donnee* creerDonnee(int pouls, int frequance)
+donnee* creerDonnee(int pouls, int temps)
 {
     donnee *donneeCreation ;
 
     donneeCreation = malloc(sizeof(donnee));
     donneeCreation->pouls = pouls;
-    donneeCreation->frequance = frequance;
+    donneeCreation->temps = temps;
     donneeCreation->nextDonnee = NULL;
     return donneeCreation;
 }
@@ -25,10 +25,9 @@ donnee *chargeFichier() {
     donnee *lastDonnee = NULL;
     donnee *currDonnee = NULL;
 
-
     int checkCloture = 1;
     int pouls;
-    int frequance;
+    int temps;
     char line[255];
 
     FILE *f;
@@ -52,8 +51,8 @@ donnee *chargeFichier() {
             while(fgets(line,255,f))
             {
 
-                sscanf(line,"%d;%d\n", &pouls, &frequance);
-                lastDonnee = creerDonnee(pouls, frequance);
+                sscanf(line,"%d;%d\n", &temps, &pouls);
+                lastDonnee = creerDonnee(pouls, temps);
                 ajouterDonneeListe( lastDonnee, currDonnee);
                 currDonnee = lastDonnee;
             }

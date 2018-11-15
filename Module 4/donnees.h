@@ -7,7 +7,7 @@ struct donnee {
 
 int pouls;
 
-int frequance;
+int temps;
 
 donnee *nextDonnee;
 };

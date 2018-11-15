@@ -6,7 +6,7 @@ void afficherDonnee(donnee *maDonne){
 
     printf("Pouls : %d ; Temps(s) : %d\n\n",
             maDonne->pouls,
-            maDonne->frequance);
+            maDonne->temps);
 }
 
 void afficherToutesDonnees(donnee *listeDonnee)
@@ -29,8 +29,8 @@ void trierListe(donnee *listeDonnee)
     int i = 0;
     int j = 0;
     int g = 0;
-    int N = 50;
-
+    int N = 9;
+    int r = 0;
 
     while(a->nextDonnee != NULL){
 
@@ -44,7 +44,7 @@ void trierListe(donnee *listeDonnee)
 
     while(b->nextDonnee != NULL){
 
-        listB[j] = b->frequance;
+        listB[j] = b->temps;
 
         b = b->nextDonnee;
 
@@ -55,7 +55,12 @@ void trierListe(donnee *listeDonnee)
      tricroissant(listA, N);
      tricroissant(listB, N);
 
-    for(int g = 0; g<50; g++)
+    /* while(listeDonnee->nextDonnee != NULL)
+     {
+         r++;
+     }*/
+
+    for(int g = 0; g<9; g++)
     {
         printf("Une fois trie on a :\n");
         printf("Pouls : %d ; Temps(s) : %d\n", listA[g], listB[g]);
@@ -91,33 +96,32 @@ void tricroissant( int a[], int b )
 }
 void rechercheMaxEtMin (donnee *listeDonees)
 {
+   int max[5];
+   int min[5];
+   max[0] = 0;
+   min[0] = 1000;
 
-    int max;
-    int min;
-    int tempsMax;
-    int tempsMin;
+   listeDonees = listeDonees->nextDonnee;
 
-    while (listeDonees->nextDonnee != NULL)
-    {
-        if (max < listeDonees->pouls){
+   while(listeDonees->nextDonnee != NULL )
+   {
+       if( max[0] < listeDonees->pouls)
+       {
+            max[0] = listeDonees->pouls;
+            max[1] = listeDonees->temps;
+           //printf("La valeur maximum du pouls est %d atteinte a %d s\n", max->pouls, max->temps);
+       }
 
-            max = listeDonees->pouls;
-
-            tempsMax = listeDonees->frequance;
-        }
-
-        if (min > listeDonees->pouls){
-
-            min = listeDonees->pouls;
-
-            tempsMin = listeDonees->frequance;
-        }
-
-        listeDonees = listeDonees->nextDonnee;
-    }
-
-    printf("La valeur maximum du pouls est %d atteinte a %d s\n", max, tempsMax);
-    printf("La valeur minimum du pouls est %d atteinte a %d s\n", min, tempsMin);
+       if( min[0] > listeDonees->pouls)
+       {
+            min[0] = listeDonees->pouls;
+            min[1] = listeDonees->temps;
+           //printf("La valeur maximum du pouls est %d atteinte a %d s\n", max->pouls, max->temps);
+       }
+       listeDonees = listeDonees->nextDonnee;
+   }
+    printf("La valeur maximum du pouls est %d atteinte a %d s\n", max[0], max[1]);
+    printf("La valeur minimum du pouls est %d atteinte a %d s\n", min[0], min[1]);
 }
 
 void moyennePouls (donnee *listeDonnees)
@@ -148,7 +152,7 @@ void tempsPrecis (donnee *listeDonnees)
 
 
 
-        while(k != listeDonnees->frequance)
+        while(k != listeDonnees->temps)
         {
             x = listeDonnees->pouls;
 
@@ -162,6 +166,7 @@ void tempsPrecis (donnee *listeDonnees)
             else
             {
                 printf("//!\\Temps non trouve");
+                break;
             }
         }
         printf("La pouls coresspondant a ce temps est : %d\n", x);
@@ -212,7 +217,7 @@ void lignesMemoire(donnee *listeDonnees)
 
     while(b->nextDonnee != NULL){
 
-        listB[j] = b->frequance;
+        listB[j] = b->temps;
 
         b = b->nextDonnee;
 
@@ -220,12 +225,12 @@ void lignesMemoire(donnee *listeDonnees)
 
     }
 
-    while(debut>listeDonnees->frequance<fin)
+    while(debut>listeDonnees->temps<fin)
     {
 
         printf("Entre %d s et %d s les pouls sont :\n", debut, fin);
         printf("%d\n", listA[g]);
-        listeDonnees->frequance = listeDonnees->nextDonnee->frequance;
+        listeDonnees->temps = listeDonnees->nextDonnee->temps;
         g++;
 
     }
