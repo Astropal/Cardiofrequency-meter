@@ -34,7 +34,7 @@ void afficherMenu()
         			case 2  :
         			{
                         listeDeDonnee = chargeFichier();
-                        trierListe(listeDeDonnee);
+                        trisAuChoix(listeDeDonnee);
         				break;
         			}
         			case 3 :

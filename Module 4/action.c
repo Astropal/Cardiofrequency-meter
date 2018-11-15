@@ -19,80 +19,145 @@ void afficherToutesDonnees(donnee *listeDonnee)
     }
     afficherDonnee(donneeAAfficher);
 }
-
-void trierListe(donnee *listeDonnee)
+void trisAuChoix (donnee *listeDonne)
 {
-    donnee *a = listeDonnee;
-    donnee *b = listeDonnee;
-    int listA[150];
-    int listB[150];
-    int i = 0;
-    int j = 0;
-    int g = 0;
-    int N = 9;
-    int r = 0;
+    int pick = 0;
 
-    while(a->nextDonnee != NULL){
+    printf("Quel tri voulez vous effectuer ?\n");
+    printf("(1) Pouls Croissant\n");
+    printf("(2) Pouls Decroissant\n");
+    printf("(3) Temps Decroissant\n");
+    printf("(0) Quitter\n");
 
-                listA[i] = a->pouls;
+    scanf("%d", &pick);
 
-                a = a->nextDonnee;
-
-                i++;
-
-            }
-
-    while(b->nextDonnee != NULL){
-
-        listB[j] = b->temps;
-
-        b = b->nextDonnee;
-
-        j++;
-
-    }
-
-     tricroissant(listA, N);
-     tricroissant(listB, N);
-
-    /* while(listeDonnee->nextDonnee != NULL)
-     {
-         r++;
-     }*/
-
-    for(int g = 0; g<9; g++)
+    switch(pick)
     {
-        printf("Une fois trie on a :\n");
-        printf("Pouls : %d ; Temps(s) : %d\n", listA[g], listB[g]);
+    case 1 :
+        {
+            listeDonne = chargeFichier();
+            trisPoulsCroissant(listeDonne);
+            break;
+        }
+    case 2 :
+        {
+            listeDonne = chargeFichier();
+            trisPoulsDecroissant(listeDonne);
+            break;
+        }
+    case 3 :
+        {
+            listeDonne = chargeFichier();
+            trisTempsDecroissant(listeDonne);
+            break;
+        }
+    default :
+        {
+            printf("Fermeture du tri\n");
+        }
+
+
     }
 }
-void tricroissant( int a[], int b )
-{
-    int i=0;
-    int x=0;
-    int j=0;
+void echange (donnee *encours , donnee *encoursGrand){
+   int temps;
+   int pouls;
 
-    for(i=0;i<b;i++)
+    pouls = encoursGrand->pouls;
+    encoursGrand->pouls = encours->pouls;
+    encours->pouls = pouls;
+
+    temps = encoursGrand->temps;
+    encoursGrand->temps = encours->temps;
+    encours->temps = temps;
+}
+
+void trisTempsDecroissant(donnee *listeDonnees){
+
+int permutation ;
+donnee *encours;
+donnee *encoursGrand;
+encoursGrand = NULL;
+
+    if (listeDonnees == NULL)
+        return;
+
+    do
     {
-        for(j=1;j<b;j++)
+        permutation  = 0 ;
+        encours = listeDonnees->nextDonnee;
+
+        while (encours->nextDonnee != encoursGrand)
         {
-            if(a[i]<a[j])
+            if (encours->temps < encours->nextDonnee->temps)
             {
-                x=a[i];
-                a[i]=a[j];
-                a[j]=x;
-                j--;
-                }
-
+                echange(encours,encours->nextDonnee);
+                permutation = 1 ;
+            }
+            encours = encours->nextDonnee;
         }
+        encours = encoursGrand;
+    }
+    while (permutation);
+    afficherToutesDonnees(listeDonnees);
+}
+void trisPoulsCroissant(donnee *listeDonnees){
 
+int permutation ;
+donnee *encours;
+donnee *encoursGrand;
+encoursGrand = NULL;
+
+    if (listeDonnees == NULL)
+        return;
+
+    do
+    {
+        permutation  = 0 ;
+        encours = listeDonnees->nextDonnee;
+
+        while (encours->nextDonnee != encoursGrand)
+        {
+            if (encours->pouls > encours->nextDonnee->pouls)
+            {
+                echange(encours,encours->nextDonnee);
+                permutation = 1 ;
+            }
+            encours = encours->nextDonnee;
         }
+        encours = encoursGrand;
+    }
+    while (permutation);
+    afficherToutesDonnees(listeDonnees);
+}
+void trisPoulsDecroissant(donnee *listeDonnees){
 
-    x=a[0];
-    for(i=0;i<b;i++)
-    a[i]=a[i+1];
-    a[b-1]=x;
+int permutation ;
+donnee *encours;
+donnee *encoursGrand;
+encoursGrand = NULL;
 
+    if (listeDonnees == NULL)
+        return;
+
+    do
+    {
+        permutation  = 0 ;
+        encours = listeDonnees->nextDonnee;
+
+        while (encours->nextDonnee != encoursGrand)
+        {
+            if (encours->pouls < encours->nextDonnee->pouls)
+            {
+                echange(encours,encours->nextDonnee);
+                permutation = 1 ;
+            }
+            encours = encours->nextDonnee;
+        }
+        encours = encoursGrand;
+    }
+    while (permutation);
+    afficherToutesDonnees(listeDonnees);
 }
 void rechercheMaxEtMin (donnee *listeDonees)
 {
@@ -137,7 +202,7 @@ void moyennePouls (donnee *listeDonnees)
         n++;
 
     }
-
+    somme = somme + listeDonnees->pouls;
     moyenne = somme/n;
     printf("La moyenne du pouls est : %f\n", moyenne);
 }

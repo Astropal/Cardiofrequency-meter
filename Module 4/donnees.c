@@ -51,7 +51,7 @@ donnee *chargeFichier() {
             while(fgets(line,255,f))
             {
 
-                sscanf(line,"%d;%d\n", &temps, &pouls);
+                sscanf(line,"%d;%d\n", &pouls, &temps);
                 lastDonnee = creerDonnee(pouls, temps);
                 ajouterDonneeListe( lastDonnee, currDonnee);
                 currDonnee = lastDonnee;

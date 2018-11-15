@@ -4,8 +4,10 @@
 
 void afficherDonnee(donnee *maDonne);
 void afficherToutesDonnees(donnee *listeDonnee);
-void trierListe(donnee *listeDonnee);
-void tricroissant( int a[], int b );
+void trisTempsDecroissant(donnee *listeDonnees);
+void echange (donnee *encours , donnee *encoursGrand);
+void trisPoulsCroissant(donnee *listeDonnees);
+void trisPoulsDecroissant(donnee *listeDonnees);
 void rechercheMaxEtMin (donnee *listeDonees);
 void moyennePouls (donnee *listeDonnees);
 void tempsPrecis (donnee *listeDonnees);
