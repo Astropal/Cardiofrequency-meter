@@ -49,3 +49,23 @@
 	"menu.h"
 	"generationCode.h"
 
+1542276460 source:c:\users\antoi\onedrive\documents\exia\projets\blocs 1\code module 2\generationcode.c
+	"generationCode.h"
+	<stdio.h>
+	<stdlib.h>
+
+1542123292 c:\users\antoi\onedrive\documents\exia\projets\blocs 1\code module 2\generationcode.h
+
+1542122005 source:c:\users\antoi\onedrive\documents\exia\projets\blocs 1\code module 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1542121983 c:\users\antoi\onedrive\documents\exia\projets\blocs 1\code module 2\menu.h
+
+1542125514 source:c:\users\antoi\onedrive\documents\exia\projets\blocs 1\code module 2\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"generationCode.h"
+
