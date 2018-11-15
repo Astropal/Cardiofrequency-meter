@@ -6,7 +6,7 @@ int generation(int choice, int n)
 {
     FILE* f = NULL;
 
-    f = fopen("coeur.c/param.h", "w");
+    f = fopen("coeur/param.h", "w");
 
     if (f != NULL)
     {
@@ -52,7 +52,7 @@ int generation(int choice, int n)
     }
     else
     {
-        printf("Impossible d'ouvrir le fichier test.txt");
+        printf("Impossible d'ouvrir le fichier \n\n");
     }
 
     return 0;
