@@ -1,0 +1,102 @@
+# depslib dependency file v1.0
+1542036723 source:c:\users\cleme\documents\projet 1 cesi\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1542037451 c:\users\cleme\documents\projet 1 cesi\menu.h
+
+1542037260 source:c:\users\cleme\documents\projet 1 cesi\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1542037260 source:c:\users\cleme\documents\gitprojet1cesi\cesi_projet01\projet 1 cesi\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1542037451 c:\users\cleme\documents\gitprojet1cesi\cesi_projet01\projet 1 cesi\menu.h
+
+1542096169 source:c:\users\cleme\documents\gitprojet1cesi\cesi_projet01\projet 1 cesi\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"donnees.h"
+
+1542095638 source:c:\users\cleme\documents\gitprojet1cesi\cesi_projet01\projet 1 cesi\action.c
+	<stdio.h>
+	<stdlib.h>
+	"action.h"
+
+1542096479 source:c:\users\cleme\documents\gitprojet1cesi\cesi_projet01\projet 1 cesi\donnees.c
+	<stdio.h>
+	<stdlib.h>
+	"donnees.h"
+	<string.h>
+
+1542095638 c:\users\cleme\documents\gitprojet1cesi\cesi_projet01\projet 1 cesi\donnees.h
+
+1542095666 c:\users\cleme\documents\gitprojet1cesi\cesi_projet01\projet 1 cesi\action.h
+	"donnees.h"
+
+1542286882 source:c:\users\cleme\documents\gitprojet1cesi\cesi_projet01\module 4\action.c
+	<stdio.h>
+	<stdlib.h>
+	"action.h"
+
+1542285944 c:\users\cleme\documents\gitprojet1cesi\cesi_projet01\module 4\action.h
+	"donnees.h"
+
+1542278598 c:\users\cleme\documents\gitprojet1cesi\cesi_projet01\module 4\donnees.h
+
+1542279582 source:c:\users\cleme\documents\gitprojet1cesi\cesi_projet01\module 4\donnees.c
+	<stdio.h>
+	<stdlib.h>
+	"donnees.h"
+	<string.h>
+
+1542100151 source:c:\users\cleme\documents\gitprojet1cesi\cesi_projet01\module 4\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1542100151 c:\users\cleme\documents\gitprojet1cesi\cesi_projet01\module 4\menu.h
+
+1542286560 source:c:\users\cleme\documents\gitprojet1cesi\cesi_projet01\module 4\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"donnees.h"
+	"action.h"
+
+1542363619 source:c:\pc\travail\a1\projet 1\final\code\partie 2\action.c
+	<stdio.h>
+	<stdlib.h>
+	"action.h"
+
+1542363619 c:\pc\travail\a1\projet 1\final\code\partie 2\action.h
+	"donnees.h"
+
+1542279167 c:\pc\travail\a1\projet 1\final\code\partie 2\donnees.h
+
+1542365710 source:c:\pc\travail\a1\projet 1\final\code\partie 2\donnees.c
+	<stdio.h>
+	<stdlib.h>
+	"donnees.h"
+	<string.h>
+
+1542279167 source:c:\pc\travail\a1\projet 1\final\code\partie 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1542279167 c:\pc\travail\a1\projet 1\final\code\partie 2\menu.h
+
+1542363619 source:c:\pc\travail\a1\projet 1\final\code\partie 2\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"donnees.h"
+	"action.h"
+
